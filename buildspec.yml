@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+    ECR_REGISTRY: "801232946361.dkr.ecr.us-east-1.amazonaws.com"
+    IMAGE_NAME: "migrai/mission-control"
+    IMAGE_TAG: "latest"
+
+phases:
+  pre_build:
+    commands:
+      - echo "Logging in to ECR..."
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+      - echo "Build started at $(date)"
+
+  build:
+    commands:
+      - echo "Building Mission Control Docker image..."
+      - docker build --platform linux/amd64 -t $ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
+
+  post_build:
+    commands:
+      - echo "Pushing image to ECR..."
+      - docker push $ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+      - echo "Build completed at $(date)"
