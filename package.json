@@ -1,7 +1,7 @@
 {
-  "name": "mission-control",
+  "name": "migrai-mission-control",
   "version": "2.0.0",
-  "description": "OpenClaw Mission Control — open-source agent orchestration dashboard",
+  "description": "MigrAI Mission Control — Plataforma de Orquestração de Agentes AI",
   "scripts": {
     "verify:node": "node scripts/check-node-version.mjs",
     "dev": "pnpm run verify:node && next dev --hostname 127.0.0.1 --port ${PORT:-3000}",
@@ -77,11 +77,11 @@
     "dashboard",
     "nextjs"
   ],
-  "author": "Builderz Labs",
+  "author": "MigrAI <team@migrai.com.br>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/builderz-labs/mission-control.git"
+    "url": "https://github.com/brunohelius/migrai-mission-control.git"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

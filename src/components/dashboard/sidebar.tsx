@@ -88,15 +88,15 @@ export function Sidebar() {
           <div className="w-8 h-8 rounded-lg overflow-hidden bg-background border border-border/50 flex items-center justify-center">
             <Image
               src="/brand/mc-logo-128.png"
-              alt="Mission Control logo"
+              alt="MigrAI logo"
               width={32}
               height={32}
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h2 className="font-bold text-foreground">Mission Control</h2>
-            <p className="text-xs text-muted-foreground">ClawdBot Orchestration</p>
+            <h2 className="font-bold text-foreground">MigrAI</h2>
+            <p className="text-xs text-muted-foreground">Mission Control</p>
           </div>
         </div>
       </div>
